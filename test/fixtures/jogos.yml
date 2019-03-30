@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  descricao: MyText
+  desenvolvedora: MyString
+  lancamento: 2019-03-08
+
+two:
+  titulo: MyString
+  descricao: MyText
+  desenvolvedora: MyString
+  lancamento: 2019-03-08

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classificacoes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade minima</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classificacoes.each do |classificacao| %>
+      <tr>
+        <td><%= classificacao.nome %></td>
+        <td><%= classificacao.idade_minima %></td>
+        <td><%= link_to 'Show', classificacao %></td>
+        <td><%= link_to 'Edit', edit_classificacao_path(classificacao) %></td>
+        <td><%= link_to 'Destroy', classificacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Classificacao', new_classificacao_path %>

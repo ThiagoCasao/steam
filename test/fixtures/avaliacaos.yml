@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  analise: MyText
+  estrelas: 1.5
+  usuario: one
+  jogo: one
+
+two:
+  analise: MyText
+  estrelas: 1.5
+  usuario: two
+  jogo: two

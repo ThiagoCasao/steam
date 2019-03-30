@@ -1,0 +1,43 @@
+<%= form_with(model: jogo, local: true) do |form| %>
+  <% if jogo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jogo.errors.count, "error") %> prohibited this jogo from being saved:</h2>
+
+      <ul>
+      <% jogo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desenvolvedora %>
+    <%= form.text_field :desenvolvedora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lancamento %>
+    <%= form.date_select :lancamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classificacao_id %>
+    <%= form.select(:classificacao_id, 
+                    Classificacao.all.collect {|cl| [cl.nome, cl.id]}) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
